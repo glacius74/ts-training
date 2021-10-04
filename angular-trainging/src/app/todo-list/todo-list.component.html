@@ -1,0 +1,8 @@
+<div class="task-input-form">
+    <input type="text" [(ngModel)]="todo" type="text" placeholder="Enter your task">
+    <button (click)="addToList()">Add Task</button>
+</div>
+
+<div class="todo-list" *ngFor="let todo of todos; let index = index">
+    {{todo}}<input type="button" (click)="deleteTodo(index)" value="Finish Task">
+</div>
